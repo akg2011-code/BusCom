@@ -11,21 +11,23 @@ namespace DatabaseCodeFirst.Models
     public class Trip
     {
         [Required]
-        [Index("IX_UniqueTripForBus", 1, IsUnique = true)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
+        [Index("IX_UniqueTripPerTime", 1, IsUnique = true)]
         [Required]
         [ForeignKey("Source")]
         public int SourceId { get; set; }
         
+        [Index("IX_UniqueTripPerTime", 2, IsUnique = true)]
         [Required]
         [ForeignKey("Destination")]
         public int DestinationId { get; set; }
 
-        [Index("IX_UniqueTripForBus", 2, IsUnique = true)]
+        [Index("IX_UniqueTripPerTime", 3, IsUnique = true)]
         public DateTime DepartureTime { get; set; }
         
+        [Index("IX_UniqueBus", IsUnique = true)]
         [ForeignKey("Bus")]
         public int BusId { get; set; }
         public Bus Bus { get; set; }

@@ -131,6 +131,14 @@
     <Compile Include="Migrations\202004081943244_DisableLazyLoading.designer.cs">
       <DependentUpon>202004081943244_DisableLazyLoading.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004092135083_UniqueBusForTrip.cs" />
+    <Compile Include="Migrations\202004092135083_UniqueBusForTrip.designer.cs">
+      <DependentUpon>202004092135083_UniqueBusForTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004092145081_UniqueTripPerTimeConstraint.cs" />
+    <Compile Include="Migrations\202004092145081_UniqueTripPerTimeConstraint.designer.cs">
+      <DependentUpon>202004092145081_UniqueTripPerTimeConstraint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Bus.cs" />
@@ -196,6 +204,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004081943244_DisableLazyLoading.resx">
       <DependentUpon>202004081943244_DisableLazyLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004092135083_UniqueBusForTrip.resx">
+      <DependentUpon>202004092135083_UniqueBusForTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004092145081_UniqueTripPerTimeConstraint.resx">
+      <DependentUpon>202004092145081_UniqueTripPerTimeConstraint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -19,11 +19,17 @@ namespace testProj
         private List<int> seatsChosen;
         private SeatsDAL seatsDAL = new SeatsDAL();
         private BusesDAL busesDAL = new BusesDAL();
-
-        public SeatReservation()
+        private Trip trip;
+        public SeatReservation(Trip _trip)
         {
             InitializeComponent();
-            InitSeats(1);
+            trip = _trip;
+        }
+
+
+        private void SeatReservation_Load(object sender, EventArgs e)
+        {
+            InitSeats(trip.BusId);
             seatsChosen = new List<int>();
         }
 

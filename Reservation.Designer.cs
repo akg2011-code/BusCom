@@ -37,8 +37,8 @@
             this.cbTo = new MetroFramework.Controls.MetroComboBox();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.cbTime = new MetroFramework.Controls.MetroComboBox();
+            this.btnNext = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -79,7 +79,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(40, 208);
+            this.metroLabel4.Location = new System.Drawing.Point(40, 220);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(36, 19);
             this.metroLabel4.TabIndex = 3;
@@ -92,10 +92,8 @@
             this.cbFrom.ItemHeight = 23;
             this.cbFrom.Location = new System.Drawing.Point(26, 129);
             this.cbFrom.Name = "cbFrom";
-            this.cbFrom.PromptText = "From";
             this.cbFrom.Size = new System.Drawing.Size(109, 29);
             this.cbFrom.TabIndex = 5;
-            this.cbFrom.Text = "From";
             this.cbFrom.UseSelectable = true;
             this.cbFrom.SelectedIndexChanged += new System.EventHandler(this.cbFrom_SelectedIndexChanged);
             // 
@@ -105,59 +103,54 @@
             this.cbTo.ItemHeight = 23;
             this.cbTo.Location = new System.Drawing.Point(210, 129);
             this.cbTo.Name = "cbTo";
-            this.cbTo.PromptText = "To";
             this.cbTo.Size = new System.Drawing.Size(109, 29);
             this.cbTo.TabIndex = 6;
-            this.cbTo.Text = "To";
             this.cbTo.UseSelectable = true;
+            this.cbTo.SelectedIndexChanged += new System.EventHandler(this.getTripsTime);
             // 
             // metroDateTime1
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(26, 244);
+            this.metroDateTime1.Location = new System.Drawing.Point(95, 209);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
             this.metroDateTime1.TabIndex = 9;
+            this.metroDateTime1.ValueChanged += new System.EventHandler(this.getTripsTime);
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(40, 316);
+            this.metroLabel2.Location = new System.Drawing.Point(40, 312);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(38, 19);
             this.metroLabel2.TabIndex = 10;
             this.metroLabel2.Text = "Time";
             // 
-            // metroComboBox3
+            // cbTime
             // 
-            this.metroComboBox3.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
-            this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 23;
-            this.metroComboBox3.Items.AddRange(new object[] {
-            "6 AM",
-            "1 PM",
-            "7 PM"});
-            this.metroComboBox3.Location = new System.Drawing.Point(26, 351);
-            this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.PromptText = "Time";
-            this.metroComboBox3.Size = new System.Drawing.Size(64, 29);
-            this.metroComboBox3.TabIndex = 11;
-            this.metroComboBox3.Text = "Time";
-            this.metroComboBox3.UseSelectable = true;
+            this.cbTime.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
+            this.cbTime.FormattingEnabled = true;
+            this.cbTime.ItemHeight = 23;
+            this.cbTime.Location = new System.Drawing.Point(26, 337);
+            this.cbTime.Name = "cbTime";
+            this.cbTime.Size = new System.Drawing.Size(98, 29);
+            this.cbTime.TabIndex = 11;
+            this.cbTime.UseSelectable = true;
             // 
-            // metroButton1
+            // btnNext
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.ForeColor = System.Drawing.Color.White;
-            this.metroButton1.Location = new System.Drawing.Point(72, 411);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(199, 48);
-            this.metroButton1.TabIndex = 12;
-            this.metroButton1.Text = "Next";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseCustomForeColor = true;
-            this.metroButton1.UseSelectable = true;
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.btnNext.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(72, 439);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(199, 48);
+            this.btnNext.TabIndex = 12;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseCustomBackColor = true;
+            this.btnNext.UseCustomForeColor = true;
+            this.btnNext.UseSelectable = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // pictureBox1
             // 
@@ -182,7 +175,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(11, 315);
+            this.pictureBox3.Location = new System.Drawing.Point(11, 301);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(23, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,8 +190,8 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.metroComboBox3);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.cbTime);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(metroLabel7);
@@ -210,6 +203,7 @@
             this.Name = "Reservation";
             this.Text = "Reservation";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Load += new System.EventHandler(this.Reservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -226,8 +220,8 @@
         private MetroFramework.Controls.MetroComboBox cbTo;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox3;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroComboBox cbTime;
+        private MetroFramework.Controls.MetroButton btnNext;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
