@@ -118,7 +118,7 @@ namespace testProj
             {
                 SeatReservation seatForm = new SeatReservation(trip);
                 seatForm.ShowDialog();
-
+                this.Close();
             }
         }
     }

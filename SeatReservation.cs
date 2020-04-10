@@ -56,6 +56,9 @@ namespace testProj
         private void btnNext_Click(object sender, EventArgs e)
         {
             seatsDAL.Reserve(seatsChosen.ToArray());
+            Ticket formTicket = new Ticket(trip,seatsChosen);
+            formTicket.ShowDialog();
+            this.Close();
         }
 
         private void InitSeats(int _busId) 
