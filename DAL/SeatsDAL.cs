@@ -12,9 +12,9 @@ namespace DatabaseCodeFirst.DAL
     {
         DatabaseContext ctx = new DatabaseContext();
 
-        public void Reserve(int[] seats) 
+        public void Reserve(int[] seats,int busId) 
         {
-            var seatsReserved = ctx.Seats.Where(s => seats.Contains(s.SeatNumber));
+            var seatsReserved = ctx.Seats.Where(s => seats.Contains(s.SeatNumber) && s.BusId == busId);
             foreach (var seat in seatsReserved)
             {
                 seat.IsAvailable = false;

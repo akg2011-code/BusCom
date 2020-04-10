@@ -80,3 +80,5 @@ F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\te
 F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\DatabaseCodeFirst.Migrations.UniqueBusForTrip.resources
 F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\DatabaseCodeFirst.Migrations.UniqueTripPerTimeConstraint.resources
 F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\testProj.Ticket.resources
+F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\testProj.CustomerInformation.resources
+F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\DatabaseCodeFirst.Migrations.LoginUser.resources

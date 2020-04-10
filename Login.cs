@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseCodeFirst.contextDB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,9 @@ namespace testProj
 {
     public partial class Login : MetroFramework.Forms.MetroForm
     {
-        LoginUser User;
+        LoginUser loggedUser;
         Dashboard dashboard ;
+        DatabaseContext ctx = new DatabaseContext();
         public Login()
         {
             
@@ -23,37 +25,38 @@ namespace testProj
 
         private void Login_Load(object sender, EventArgs e)
         {
-            User = new LoginUser();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            LoginUser User = new LoginUser();
-            User.adminName = "admin";
-            User.adminPassword = "admin";
-            User.userName = "client";
-            User.userPassword = "client";
+            string userName = userTextbox.Text;
+            string password = passwordTextBox.Text;
+            loggedUser = ctx.Users.Where(u => u.userName == userName && u.Password == password).FirstOrDefault();
 
-            if (userTextbox.Text == User.adminName && passwordTextBox.Text == User.adminPassword)
+            if (loggedUser != null)
             {
-                dashboard = new Dashboard(User.adminName, User.adminPassword);
+                dashboard = new Dashboard(loggedUser);
                 this.Hide();
                 dashboard.ShowDialog();
                 this.Close();
             }
-            else if (userTextbox.Text == User.userName && passwordTextBox.Text == User.userPassword)
-            {
-                dashboard = new Dashboard(User.userName, User.userPassword);
-                this.Hide();
-                dashboard.ShowDialog();
-                this.Close();
-                
-            }
-
-            if (userTextbox.Text != User.adminName || passwordTextBox.Text != User.adminPassword || userTextbox.Text == User.userName && passwordTextBox.Text == User.userPassword)
-            {
+            else
                 MessageBox.Show("user name or password is invalid !");
-            }
+
+                //}
+                //else if (userTextbox.Text == User.userName && passwordTextBox.Text == User.userPassword)
+                //{
+                //    dashboard = new Dashboard(User.userName, User.userPassword);
+                //    this.Hide();
+                //    dashboard.ShowDialog();
+                //    this.Close();
+
+                //}
+
+                //if (userTextbox.Text != User.userName || passwordTextBox.Text != User.Password || userTextbox.Text == User.userName && passwordTextBox.Text == User.Password)
+                //{
+                //    MessageBox.Show("user name or password is invalid !");
+                //}
 
 
         }

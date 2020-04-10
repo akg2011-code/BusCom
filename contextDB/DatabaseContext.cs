@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using DatabaseCodeFirst.Models;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using testProj.Models;
 
 namespace DatabaseCodeFirst.contextDB
 {
@@ -27,6 +28,7 @@ namespace DatabaseCodeFirst.contextDB
         public DbSet<Seat> Seats { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Branch> Branches { get; set; }
+        public DbSet<LoginUser> Users { get; set; }
 
     }
 }

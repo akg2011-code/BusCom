@@ -69,6 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="contextDB\DatabaseContext.cs" />
+    <Compile Include="CustomerInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerInformation.Designer.cs">
+      <DependentUpon>CustomerInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAL\BranchDAL.cs" />
     <Compile Include="DAL\BusesDAL.cs" />
     <Compile Include="DAL\SeatsDAL.cs" />
@@ -139,6 +145,10 @@
     <Compile Include="Migrations\202004092145081_UniqueTripPerTimeConstraint.designer.cs">
       <DependentUpon>202004092145081_UniqueTripPerTimeConstraint.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004101720193_LoginUser.cs" />
+    <Compile Include="Migrations\202004101720193_LoginUser.designer.cs">
+      <DependentUpon>202004101720193_LoginUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Bus.cs" />
@@ -173,6 +183,9 @@
     <Compile Include="Ticket.Designer.cs">
       <DependentUpon>Ticket.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomerInformation.resx">
+      <DependentUpon>CustomerInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004092145081_UniqueTripPerTimeConstraint.resx">
       <DependentUpon>202004092145081_UniqueTripPerTimeConstraint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004101720193_LoginUser.resx">
+      <DependentUpon>202004101720193_LoginUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

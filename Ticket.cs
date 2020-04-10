@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using testProj.Models;
 
 namespace testProj
 {
@@ -16,13 +17,15 @@ namespace testProj
     {
         Trip trip;
         List<int> seats;
+        LoginUser loggedUser;
         string customerName;
-        public Ticket(Trip _trip,List<int> _seats,string _CustomerName)
+        public Ticket(LoginUser _loggedUser,Trip _trip,List<int> _seats,string _customerName)
         {
             InitializeComponent();
             trip = _trip;
             seats = _seats;
-            customerName = _CustomerName;
+            loggedUser = _loggedUser;
+            customerName = _customerName;
 
         }
         //for move body of form 
@@ -108,12 +111,20 @@ namespace testProj
             if (seats.Count>1)
             for (; i < seats.Count -1; i++)
             {
-                sb.Append($"{seats.ElementAt(i)},");
+                sb.Append($"{seats.ElementAt(i)} , ");
             }
             sb.Append($"{seats.ElementAt(i)}");
 
             txtSeat.Text = sb.ToString();
         }
 
+        private void nextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard(loggedUser);
+            this.Hide();
+            dashboard.ShowDialog();
+            this.Close();
+
+        }
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using DatabaseCodeFirst.contextDB;
 using DatabaseCodeFirst.Models;
 using DatabaseCodeFirst.DAL;
-
+using testProj.Models;
 
 namespace testProj
 {
@@ -20,12 +20,14 @@ namespace testProj
         private SeatsDAL seatsDAL = new SeatsDAL();
         private BusesDAL busesDAL = new BusesDAL();
         private Trip trip;
+        private LoginUser loggedUser;
         private string customerName;
-        public SeatReservation(Trip _trip,string _CustomerName)
+        public SeatReservation(LoginUser _loggedUser,Trip _trip,string _customerName)
         {
             InitializeComponent();
             trip = _trip;
-            customerName = _CustomerName;
+            loggedUser = _loggedUser;
+            customerName = _customerName;
         }
 
 
@@ -57,8 +59,9 @@ namespace testProj
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            seatsDAL.Reserve(seatsChosen.ToArray());
-            Ticket formTicket = new Ticket(trip,seatsChosen,customerName);
+            seatsDAL.Reserve(seatsChosen.ToArray(),trip.BusId);
+            Ticket formTicket = new Ticket(loggedUser, trip,seatsChosen,customerName);
+            this.Hide();
             formTicket.ShowDialog();
             this.Close();
         }

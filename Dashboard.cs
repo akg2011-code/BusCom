@@ -7,36 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using testProj.Models;
 
 namespace testProj
 {
     
     public partial class Dashboard : MetroFramework.Forms.MetroForm
     {
-        string User;
-        string Password;
-        public Dashboard(string userName,string password)
+        LoginUser loggedUser;
+        public Dashboard(LoginUser _loggedUser)
         {
-            User = userName;
-            Password = password;
+            loggedUser = _loggedUser;
             InitializeComponent();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            Reservation reservation = new Reservation();
-            reservation.Show();
+            CustomerInformation customerForm = new CustomerInformation(loggedUser);
+            this.Hide();
+            customerForm.ShowDialog();
             this.Close();
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            if (User == "client" && Password == "client")
-            {
-                branchBtn.Enabled = false;
-                TripBtn.Enabled = false;
-                BusBtn.Enabled = false;
-            }
+            //if (loggedUser.userName == "client" && loggedUser.Password == "client")
+            //{
+            //    branchBtn.Enabled = false;
+            //    TripBtn.Enabled = false;
+            //    BusBtn.Enabled = false;
+            //}
 
         }
 

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using testProj.DAL;
+using testProj.Models;
 
 namespace testProj
 {
@@ -17,10 +18,13 @@ namespace testProj
     {
         TripsDAL tripsDAL = new TripsDAL();
         BranchDAL branchDAL = new BranchDAL();
-
-        public Reservation()
+        LoginUser loggedUser;
+        string customerName;
+        public Reservation(LoginUser _loggedUser,string _customerName)
         {
-            InitializeComponent();    
+            InitializeComponent();
+            loggedUser = _loggedUser;
+            customerName = _customerName;
         }
 
         private void cbFrom_SelectedIndexChanged(object sender, EventArgs e)
@@ -116,7 +120,8 @@ namespace testProj
 
             if (trip != null)
             {
-                SeatReservation seatForm = new SeatReservation(trip);
+                SeatReservation seatForm = new SeatReservation(loggedUser,trip,customerName);
+                this.Hide();
                 seatForm.ShowDialog();
                 this.Close();
             }

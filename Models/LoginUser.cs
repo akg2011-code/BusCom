@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace testProj.Models
 {
-    class LoginUser
+    public class LoginUser
     {
-        public string adminName { get; set; }
-        public string adminPassword { get; set; }
+        [Key]
+        public int Id { get; set; }
+        [Index("IX_Unique_Username",IsUnique =true)]
+        [MaxLength(450)]
         public string userName { get; set; }
-        public string userPassword { get; set; }
+        public string Password { get; set; }
     }
 }
