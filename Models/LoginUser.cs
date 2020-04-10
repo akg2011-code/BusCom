@@ -16,5 +16,6 @@ namespace testProj.Models
         [MaxLength(450)]
         public string userName { get; set; }
         public string Password { get; set; }
+        public bool isAdmin { get; set; }
     }
 }

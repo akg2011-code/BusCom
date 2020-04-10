@@ -149,6 +149,10 @@
     <Compile Include="Migrations\202004101720193_LoginUser.designer.cs">
       <DependentUpon>202004101720193_LoginUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004101908117_isAdmin.cs" />
+    <Compile Include="Migrations\202004101908117_isAdmin.designer.cs">
+      <DependentUpon>202004101908117_isAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Bus.cs" />
@@ -233,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004101720193_LoginUser.resx">
       <DependentUpon>202004101720193_LoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004101908117_isAdmin.resx">
+      <DependentUpon>202004101908117_isAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

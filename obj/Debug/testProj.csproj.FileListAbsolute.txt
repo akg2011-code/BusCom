@@ -82,3 +82,4 @@ F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\Da
 F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\testProj.Ticket.resources
 F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\testProj.CustomerInformation.resources
 F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\DatabaseCodeFirst.Migrations.LoginUser.resources
+F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\DatabaseCodeFirst.Migrations.isAdmin.resources

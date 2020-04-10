@@ -31,12 +31,12 @@ namespace testProj
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            //if (loggedUser.userName == "client" && loggedUser.Password == "client")
-            //{
-            //    branchBtn.Enabled = false;
-            //    TripBtn.Enabled = false;
-            //    BusBtn.Enabled = false;
-            //}
+            if (!loggedUser.isAdmin)
+            {
+                branchBtn.Enabled = false;
+                TripBtn.Enabled = false;
+                BusBtn.Enabled = false;
+            }
 
         }
 
@@ -47,7 +47,10 @@ namespace testProj
 
         private void TripBtn_Click(object sender, EventArgs e)
         {
-
+            Register registerForm = new Register(loggedUser);
+            this.Hide();
+            registerForm.ShowDialog();
+            this.Close();
         }
 
         private void BusBtn_Click(object sender, EventArgs e)

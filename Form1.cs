@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -50,9 +51,13 @@ namespace testProj
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            
-                pictureBox1.Show();
-                timer1.Start();
+            pictureBox1.Show();
+            timer1.Start();
+            Login loginForm = new Login();
+            Thread.Sleep(1000);
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Close();
         }
 
         private void metroToggle1_CheckedChanged(object sender, EventArgs e)

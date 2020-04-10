@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.TripBtn = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.branchBtn = new MetroFramework.Controls.MetroButton();
             this.InfoBtn = new MetroFramework.Controls.MetroButton();
             this.BusBtn = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroButton1
@@ -62,22 +62,11 @@
             this.TripBtn.Name = "TripBtn";
             this.TripBtn.Size = new System.Drawing.Size(133, 94);
             this.TripBtn.TabIndex = 2;
-            this.TripBtn.Text = "Trips";
+            this.TripBtn.Text = "Users";
             this.TripBtn.UseCustomBackColor = true;
             this.TripBtn.UseCustomForeColor = true;
             this.TripBtn.UseSelectable = true;
             this.TripBtn.Click += new System.EventHandler(this.TripBtn_Click);
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton3.BackgroundImage")));
-            this.metroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.metroButton3.DisplayFocus = true;
-            this.metroButton3.Location = new System.Drawing.Point(12, 19);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(42, 36);
-            this.metroButton3.TabIndex = 0;
-            this.metroButton3.UseSelectable = true;
             // 
             // branchBtn
             // 
@@ -127,6 +116,17 @@
             this.BusBtn.UseSelectable = true;
             this.BusBtn.Click += new System.EventHandler(this.BusBtn_Click);
             // 
+            // metroButton3
+            // 
+            this.metroButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton3.BackgroundImage")));
+            this.metroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.metroButton3.DisplayFocus = true;
+            this.metroButton3.Location = new System.Drawing.Point(12, 19);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(42, 36);
+            this.metroButton3.TabIndex = 0;
+            this.metroButton3.UseSelectable = true;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +142,7 @@
             this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Dashboard";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.TransparencyKey = System.Drawing.Color.Empty;
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.ResumeLayout(false);
 
@@ -150,9 +151,9 @@
         #endregion
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton TripBtn;
-        private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroButton branchBtn;
         private MetroFramework.Controls.MetroButton InfoBtn;
         private MetroFramework.Controls.MetroButton BusBtn;
+        private MetroFramework.Controls.MetroButton metroButton3;
     }
 }
