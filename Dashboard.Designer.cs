@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.TripBtn = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton6 = new MetroFramework.Controls.MetroButton();
+            this.branchBtn = new MetroFramework.Controls.MetroButton();
+            this.InfoBtn = new MetroFramework.Controls.MetroButton();
+            this.BusBtn = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroButton1
@@ -52,20 +52,21 @@
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
-            // metroButton2
+            // TripBtn
             // 
-            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton2.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.metroButton2.ForeColor = System.Drawing.Color.White;
-            this.metroButton2.Location = new System.Drawing.Point(208, 217);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(133, 94);
-            this.metroButton2.TabIndex = 2;
-            this.metroButton2.Text = "Title Here";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseCustomForeColor = true;
-            this.metroButton2.UseSelectable = true;
+            this.TripBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.TripBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.TripBtn.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.TripBtn.ForeColor = System.Drawing.Color.White;
+            this.TripBtn.Location = new System.Drawing.Point(208, 217);
+            this.TripBtn.Name = "TripBtn";
+            this.TripBtn.Size = new System.Drawing.Size(133, 94);
+            this.TripBtn.TabIndex = 2;
+            this.TripBtn.Text = "Trips";
+            this.TripBtn.UseCustomBackColor = true;
+            this.TripBtn.UseCustomForeColor = true;
+            this.TripBtn.UseSelectable = true;
+            this.TripBtn.Click += new System.EventHandler(this.TripBtn_Click);
             // 
             // metroButton3
             // 
@@ -78,76 +79,80 @@
             this.metroButton3.TabIndex = 0;
             this.metroButton3.UseSelectable = true;
             // 
-            // metroButton4
+            // branchBtn
             // 
-            this.metroButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.metroButton4.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton4.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.metroButton4.ForeColor = System.Drawing.Color.White;
-            this.metroButton4.Location = new System.Drawing.Point(35, 217);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(133, 94);
-            this.metroButton4.TabIndex = 3;
-            this.metroButton4.Text = "Title Here";
-            this.metroButton4.UseCustomBackColor = true;
-            this.metroButton4.UseCustomForeColor = true;
-            this.metroButton4.UseSelectable = true;
+            this.branchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.branchBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.branchBtn.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.branchBtn.ForeColor = System.Drawing.Color.White;
+            this.branchBtn.Location = new System.Drawing.Point(35, 217);
+            this.branchBtn.Name = "branchBtn";
+            this.branchBtn.Size = new System.Drawing.Size(133, 94);
+            this.branchBtn.TabIndex = 3;
+            this.branchBtn.Text = "Branch";
+            this.branchBtn.UseCustomBackColor = true;
+            this.branchBtn.UseCustomForeColor = true;
+            this.branchBtn.UseSelectable = true;
+            this.branchBtn.Click += new System.EventHandler(this.branchBtn_Click);
             // 
-            // metroButton5
+            // InfoBtn
             // 
-            this.metroButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.metroButton5.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton5.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.metroButton5.ForeColor = System.Drawing.Color.White;
-            this.metroButton5.Location = new System.Drawing.Point(207, 330);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(133, 94);
-            this.metroButton5.TabIndex = 4;
-            this.metroButton5.Text = "Title Here";
-            this.metroButton5.UseCustomBackColor = true;
-            this.metroButton5.UseCustomForeColor = true;
-            this.metroButton5.UseSelectable = true;
+            this.InfoBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.InfoBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.InfoBtn.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.InfoBtn.ForeColor = System.Drawing.Color.White;
+            this.InfoBtn.Location = new System.Drawing.Point(207, 330);
+            this.InfoBtn.Name = "InfoBtn";
+            this.InfoBtn.Size = new System.Drawing.Size(133, 94);
+            this.InfoBtn.TabIndex = 4;
+            this.InfoBtn.Text = "Information";
+            this.InfoBtn.UseCustomBackColor = true;
+            this.InfoBtn.UseCustomForeColor = true;
+            this.InfoBtn.UseSelectable = true;
+            this.InfoBtn.Click += new System.EventHandler(this.InfoBtn_Click);
             // 
-            // metroButton6
+            // BusBtn
             // 
-            this.metroButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.metroButton6.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton6.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.metroButton6.ForeColor = System.Drawing.Color.White;
-            this.metroButton6.Location = new System.Drawing.Point(35, 330);
-            this.metroButton6.Name = "metroButton6";
-            this.metroButton6.Size = new System.Drawing.Size(133, 94);
-            this.metroButton6.TabIndex = 5;
-            this.metroButton6.Text = "Title Here";
-            this.metroButton6.UseCustomBackColor = true;
-            this.metroButton6.UseCustomForeColor = true;
-            this.metroButton6.UseSelectable = true;
+            this.BusBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.BusBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.BusBtn.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.BusBtn.ForeColor = System.Drawing.Color.White;
+            this.BusBtn.Location = new System.Drawing.Point(35, 330);
+            this.BusBtn.Name = "BusBtn";
+            this.BusBtn.Size = new System.Drawing.Size(133, 94);
+            this.BusBtn.TabIndex = 5;
+            this.BusBtn.Text = "Buses";
+            this.BusBtn.UseCustomBackColor = true;
+            this.BusBtn.UseCustomForeColor = true;
+            this.BusBtn.UseSelectable = true;
+            this.BusBtn.Click += new System.EventHandler(this.BusBtn_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 511);
-            this.Controls.Add(this.metroButton6);
-            this.Controls.Add(this.metroButton5);
-            this.Controls.Add(this.metroButton4);
+            this.Controls.Add(this.BusBtn);
+            this.Controls.Add(this.InfoBtn);
+            this.Controls.Add(this.branchBtn);
             this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.TripBtn);
             this.Controls.Add(this.metroButton1);
             this.Name = "Dashboard";
             this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Dashboard";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton TripBtn;
         private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private MetroFramework.Controls.MetroButton metroButton6;
+        private MetroFramework.Controls.MetroButton branchBtn;
+        private MetroFramework.Controls.MetroButton InfoBtn;
+        private MetroFramework.Controls.MetroButton BusBtn;
     }
 }

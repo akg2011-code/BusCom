@@ -20,10 +20,12 @@ namespace testProj
         private SeatsDAL seatsDAL = new SeatsDAL();
         private BusesDAL busesDAL = new BusesDAL();
         private Trip trip;
-        public SeatReservation(Trip _trip)
+        private string customerName;
+        public SeatReservation(Trip _trip,string _CustomerName)
         {
             InitializeComponent();
             trip = _trip;
+            customerName = _CustomerName;
         }
 
 
@@ -56,7 +58,7 @@ namespace testProj
         private void btnNext_Click(object sender, EventArgs e)
         {
             seatsDAL.Reserve(seatsChosen.ToArray());
-            Ticket formTicket = new Ticket(trip,seatsChosen);
+            Ticket formTicket = new Ticket(trip,seatsChosen,customerName);
             formTicket.ShowDialog();
             this.Close();
         }

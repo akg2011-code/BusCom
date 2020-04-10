@@ -16,11 +16,14 @@ namespace testProj
     {
         Trip trip;
         List<int> seats;
-        public Ticket(Trip _trip,List<int> _seats)
+        string customerName;
+        public Ticket(Trip _trip,List<int> _seats,string _CustomerName)
         {
             InitializeComponent();
             trip = _trip;
             seats = _seats;
+            customerName = _CustomerName;
+
         }
         //for move body of form 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -99,6 +102,7 @@ namespace testProj
             txtSource.Text = trip.Source.BranchName;
             txtDest.Text = trip.Destination.BranchName;
             txtTime.Text = trip.DepartureTime.TimeOfDay.ToString("hh':'mm");
+            txtName.Text = customerName;
             StringBuilder sb = new StringBuilder("");
             int i = 0;
             if (seats.Count>1)
