@@ -200,7 +200,10 @@
             this.Controls.Add(this.cbFrom);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
             this.Name = "Reservation";
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Reservation";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.Reservation_Load);

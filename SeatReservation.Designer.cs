@@ -470,7 +470,10 @@
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "SeatReservation";
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "SeatReservation";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.SeatReservation_Load);

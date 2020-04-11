@@ -144,7 +144,9 @@
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroTextBox1);
+            this.MaximizeBox = false;
             this.Name = "Register";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Register";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

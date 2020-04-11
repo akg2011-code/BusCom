@@ -68,6 +68,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBranch.Designer.cs">
+      <DependentUpon>AddBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBus.Designer.cs">
+      <DependentUpon>AddBus.cs</DependentUpon>
+    </Compile>
     <Compile Include="contextDB\DatabaseContext.cs" />
     <Compile Include="CustomerInformation.cs">
       <SubType>Form</SubType>
@@ -90,6 +102,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -153,6 +171,18 @@
     <Compile Include="Migrations\202004101908117_isAdmin.designer.cs">
       <DependentUpon>202004101908117_isAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004102104157_BranchIdentity.cs" />
+    <Compile Include="Migrations\202004102104157_BranchIdentity.designer.cs">
+      <DependentUpon>202004102104157_BranchIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004102115575_BranchIdentityNotNull.cs" />
+    <Compile Include="Migrations\202004102115575_BranchIdentityNotNull.designer.cs">
+      <DependentUpon>202004102115575_BranchIdentityNotNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004102146511_BranchIdentityModified.cs" />
+    <Compile Include="Migrations\202004102146511_BranchIdentityModified.designer.cs">
+      <DependentUpon>202004102146511_BranchIdentityModified.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Bus.cs" />
@@ -187,6 +217,12 @@
     <Compile Include="Ticket.Designer.cs">
       <DependentUpon>Ticket.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddBranch.resx">
+      <DependentUpon>AddBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddBus.resx">
+      <DependentUpon>AddBus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerInformation.resx">
       <DependentUpon>CustomerInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -240,6 +279,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004101908117_isAdmin.resx">
       <DependentUpon>202004101908117_isAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004102104157_BranchIdentity.resx">
+      <DependentUpon>202004102104157_BranchIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004102115575_BranchIdentityNotNull.resx">
+      <DependentUpon>202004102115575_BranchIdentityNotNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004102146511_BranchIdentityModified.resx">
+      <DependentUpon>202004102146511_BranchIdentityModified.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

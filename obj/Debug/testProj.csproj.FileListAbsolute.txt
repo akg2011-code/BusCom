@@ -83,3 +83,9 @@ F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\te
 F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\testProj.CustomerInformation.resources
 F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\DatabaseCodeFirst.Migrations.LoginUser.resources
 F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\DatabaseCodeFirst.Migrations.isAdmin.resources
+F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\testProj.AddBranch.resources
+F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\testProj.AddBus.resources
+F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\testProj.Info.resources
+F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\DatabaseCodeFirst.Migrations.BranchIdentity.resources
+F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\DatabaseCodeFirst.Migrations.BranchIdentityNotNull.resources
+F:\ITI Net fullstack developer\advanced C#\Buscom-07-04-2020\BusCom\obj\Debug\DatabaseCodeFirst.Migrations.BranchIdentityModified.resources

@@ -34,7 +34,7 @@
             this.branchBtn = new MetroFramework.Controls.MetroButton();
             this.InfoBtn = new MetroFramework.Controls.MetroButton();
             this.BusBtn = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.btnLogout = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroButton1
@@ -116,16 +116,17 @@
             this.BusBtn.UseSelectable = true;
             this.BusBtn.Click += new System.EventHandler(this.BusBtn_Click);
             // 
-            // metroButton3
+            // btnLogout
             // 
-            this.metroButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton3.BackgroundImage")));
-            this.metroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.metroButton3.DisplayFocus = true;
-            this.metroButton3.Location = new System.Drawing.Point(12, 19);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(42, 36);
-            this.metroButton3.TabIndex = 0;
-            this.metroButton3.UseSelectable = true;
+            this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.DisplayFocus = true;
+            this.btnLogout.Location = new System.Drawing.Point(12, 19);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(42, 36);
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.UseSelectable = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // Dashboard
             // 
@@ -135,10 +136,12 @@
             this.Controls.Add(this.BusBtn);
             this.Controls.Add(this.InfoBtn);
             this.Controls.Add(this.branchBtn);
-            this.Controls.Add(this.metroButton3);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.TripBtn);
             this.Controls.Add(this.metroButton1);
+            this.MaximizeBox = false;
             this.Name = "Dashboard";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Dashboard";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
@@ -154,6 +157,6 @@
         private MetroFramework.Controls.MetroButton branchBtn;
         private MetroFramework.Controls.MetroButton InfoBtn;
         private MetroFramework.Controls.MetroButton BusBtn;
-        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroButton btnLogout;
     }
 }

@@ -42,7 +42,10 @@ namespace testProj
 
         private void branchBtn_Click(object sender, EventArgs e)
         {
-
+            AddBranch branchForm = new AddBranch(loggedUser);
+            this.Hide();
+            branchForm.ShowDialog();
+            this.Close();
         }
 
         private void TripBtn_Click(object sender, EventArgs e)
@@ -55,12 +58,26 @@ namespace testProj
 
         private void BusBtn_Click(object sender, EventArgs e)
         {
-
+            AddBus busForm = new AddBus(loggedUser);
+            this.Hide();
+            busForm.ShowDialog();
+            this.Close();
         }
 
         private void InfoBtn_Click(object sender, EventArgs e)
         {
+            Info infoForm = new Info(loggedUser);
+            this.Hide();
+            infoForm.ShowDialog();
+            this.Close();
+        }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login loginForm = new Login();
+            this.Hide();
+            loginForm.ShowDialog();
+            this.Close();
         }
     }
 }
